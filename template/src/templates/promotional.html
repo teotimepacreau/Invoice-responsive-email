@@ -15,7 +15,7 @@ bodyClass: bg-slate-50
   <x-main>
     <!-- x- suivi du nom du layouts utilisé (layouts/main.html)-->
     <div
-      class="container | ml-auto mr-auto max-w-prose | py-12 px-8 sm:p-4 font-general"
+      class="container | rounded-sm bg-white | ml-auto mr-auto max-w-prose | py-12 px-8 sm:p-4 font-general"
     >
       <div class="header | flex">
         <ul class="list-none">
@@ -35,16 +35,16 @@ bodyClass: bg-slate-50
         </ul>
       </div>
     </div>
-      <h1 class="text-6xl font-normal tracking-tight leading-tight | pt-12">Invoice INV-101</h1>
-      <ul class="list-none | pt-4">
-        <li>Service provisioned : Nov 4, 2025</li>
-        <li>Issued : Nov 5, 2025</li>
-        <li>Due : Dec 5, 2025</li>
+      <h1 class="text-7xl font-normal tracking-tight leading-tight | pt-12" style="line-height: 1.1;">Invoice INV-101</h1>
+      <ul class="list-none | pt-8">
+        <li class="text-slate-500 font-medium">Service provisioned : <span class="text-black font-normal">Nov 4, 2025</span></li>
+        <li class="text-slate-500 font-medium">Issued : <span class="text-black font-normal">Nov 5, 2025</span></li>
+        <li class="text-slate-500 font-medium">Due : <span class="text-black font-normal">Dec 5, 2025</span></li>
       </ul>
-      <span class="block mt-4">Thank you for choosing our services !</span>
-      <table class="mt-8">
+      <span class="block mt-2">Thank you for choosing our services !</span>
+      <table class="mt-12">
         <thead>
-          <tr class="border-t border-0 border-solid">
+          <tr class="border-t border-0 border-solid border-slate-300">
             <th class="w-full | pt-1">Item</th>
             <th class="px-8" data-right>Qty</th>
             <th class="px-8" data-right>Rate</th>
@@ -66,7 +66,7 @@ bodyClass: bg-slate-50
           </tr>
         </tbody>
       </table>
-      <table class="mt-8 ml-auto w-1/2 | border-0 border-t border-solid">
+      <table class="mt-8 ml-auto w-1/2 | border-0 border-t border-slate-300 border-solid">
         <tbody>
           <tr>
             <td class="pt-1">Subtotal</td>
