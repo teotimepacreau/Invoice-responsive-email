@@ -4,79 +4,84 @@ preheader: "👀 Lorem, ipsum, and much dolor in this week's edition."
 image: https://images.unsplash.com/photo-1565932887479-b18108f07ffd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1200&q=80
 bodyClass: bg-slate-50
 ---
+
 <style>
   [data-right] {
     text-align: right;
-}
-
-
+  }
 </style>
-<body><!-- obligé d'avoir un body dans le template pour avoir le hot reload qui fonction -->
-<x-main> <!-- x- suivi du nom du layouts utilisé (layouts/main.html)-->
-  <div class="container | bg-slate-50 sm:p-4 font-general">
-    <ul class="list-none">
-      <li>Vivid Inc.</li>
-      <li>info@vivid.com</li>
-      <li>+1 416 855 899</li>
-      <li>2281 Market Street</li>
-      <li>San Francisco, CA 94114</li>
-    </ul>
-    <h1 class="text-4xl font-medium">Invoice INV-101</h1>
-    <ul class="list-none">
-      <li>Service provisioned : Nov 4, 2025</li>
-      <li>Issued: Nov 5, 2025</li>
-      <li>Due: Dec 5, 2025</li>
-    </ul>
-    <div class="customer">
-      <h2 class="font-medium">Customer</h2>
-      <ul class="list-none">
-        <li>Jacques Smith</li>
+<body class="bg-slate-100">
+  <!-- obligé d'avoir un body dans le template pour avoir le hot reload qui fonction -->
+  <x-main>
+    <!-- x- suivi du nom du layouts utilisé (layouts/main.html)-->
+    <div
+      class="container | ml-auto mr-auto max-w-prose | py-12 px-8 sm:p-4 font-general"
+    >
+      <div class="header | flex">
+        <ul class="list-none">
+          <li>Vivid Inc.</li>
+          <li>info@vivid.com</li>
+          <li>+1 416 855 899</li>
+          <li>2281 Market Street</li>
+          <li>San Francisco, CA 94114</li>
+        </ul>
+      
+      <div class="customer | ml-auto | text-right">
+        <ul class="list-none">
+          <li>Jacques Smith</li>
 
-        <li>33 Baker Street</li>
-        <li>San Francisco, CA 94114</li>
-      </ul>
-      <span>Thank you for choosing our services !</span>
+          <li>33 Baker Street</li>
+          <li>San Francisco, CA 94114</li>
+        </ul>
+      </div>
     </div>
-    <table>
-      <thead>
-        <tr>
-          <th>Item</th>
-          <th data-right>Qty</th>
-          <th data-right>Rate</th>
-          <th data-right>Price</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Logo Design</td>
-          <td data-right>2</td>
-          <td data-right>900.00</td>
-          <td data-right>1800.00</td>
-        </tr>
-        <tr>
-          <td>Web Design</td>
-          <td data-right>1</td>
-          <td data-right>3500.00</td>
-          <td data-right>3500.00</td>
-        </tr>
-      </tbody>
-    </table>
-    <table>
-      <tbody>
-        <tr>
-          <td>Subtotal</td>
-          <td>5300</td>
-        </tr>
-        <tr>
-          <td>Tax 23%</td>
-          <td>1334</td>
-        </tr>
-        <tr>
-          <td>Total</td>
-          <td>7134</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-</x-main>
+      <h1 class="text-6xl font-normal tracking-tight leading-tight | pt-12">Invoice INV-101</h1>
+      <ul class="list-none | pt-4">
+        <li>Service provisioned : Nov 4, 2025</li>
+        <li>Issued : Nov 5, 2025</li>
+        <li>Due : Dec 5, 2025</li>
+      </ul>
+      <span class="block mt-4">Thank you for choosing our services !</span>
+      <table class="mt-8">
+        <thead>
+          <tr class="border-t border-0 border-solid">
+            <th class="w-full | pt-1">Item</th>
+            <th class="px-8" data-right>Qty</th>
+            <th class="px-8" data-right>Rate</th>
+            <th data-right>Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="pt-4">Logo Design</td>
+            <td class="px-8" data-right>2</td>
+            <td class="px-8" data-right>900.00</td>
+            <td data-right>1800.00</td>
+          </tr>
+          <tr>
+            <td class="pt-2">Web Design</td>
+            <td class="px-8" data-right>1</td>
+            <td class="px-8" data-right>3500.00</td>
+            <td data-right>3500.00</td>
+          </tr>
+        </tbody>
+      </table>
+      <table class="mt-8 ml-auto w-1/2 | border-0 border-t border-solid">
+        <tbody>
+          <tr>
+            <td class="pt-1">Subtotal</td>
+            <td data-right>5300.00</td>
+          </tr>
+          <tr>
+            <td class="pt-1">Tax 23%</td>
+            <td data-right>1334.00</td>
+          </tr>
+          <tr>
+            <td class="pt-1">Total</td>
+            <td data-right>$7134.00</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </x-main>
 </body>
